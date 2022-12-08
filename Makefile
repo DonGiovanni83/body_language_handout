@@ -5,7 +5,7 @@ all:build
 build:
 	@latexmk -lualatex -pvc handout.tex
 serve:
-	@latexmk -lualatex -pvc handout.tex
+	@latexmk -lualatex -pvc --shell-escape handout.tex
 
 %:
 	@:

@@ -53,12 +53,13 @@
 \setkomafont{footsepline}{\color{BFH-DarkBlue}} %
 \chead*{Kommunikation 1 für die Informatik: Körpersprache}
 \setlength\parindent{12pt}
-\LoadBFHModule{boxes}
-
-
+\LoadBFHModule{boxes,tabular}
+\captionsetup{
+    justification = centering
+}
 %----------------  BFH tile page   -----------------------------------------
 \title{Körpersprache}
-\subtitle{Kommunikation 1 für die Informatik - von Baur Thomas - HS 2022}
+\subtitle{Kommunikation 1 für die Informatik - Prof. Thomas von Burg - HS 2022}
 \author{Fabio Bertagna}
 %  \publishers{publishers}
 \institution{Bern University of Applied Sciences}
@@ -75,10 +76,7 @@
     \tableofcontents
 
     \include{content/intro}
-
-    \part{Thorie}
-    \section{Das Modell vom Behagen und Unbehagen}\label{sec:das-modell-vom-behagen-und-unbehagen}
-    test\cite{menschen_verstehen_und_lenken,menschen_lesen}
+    \include{content/behagen_unbehagen}
 
     \section{Das dreieinige Gehirn}\label{sec:das-dreieinige-gehirn}
     Körpersprachliche Verhaltensmuster können bei Menschen kultur- und gesellschaftsübergreifend
@@ -165,7 +163,9 @@
     \section{Definition: Nonverbale Kommunikation}
     Der Teil der Kommunikation, welchen wir oft umgangssprachlich als \textit{Körpersprache} bezeichnen, ist
 
+
     \part{Praxis}
+
 
     \section{Angewandte nonwerbale Kommunikation}
 
@@ -203,7 +203,6 @@
     \end{bfhNoteBox}
 
     \printbibliography
-
 
 
 \end{document}
