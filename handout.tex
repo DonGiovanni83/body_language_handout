@@ -8,13 +8,6 @@
     parskip=half-,
 ]{bfhpub}                % KOMA-script report
 %---------------------------------------------------------------------------
-%---------------------------------------------------------------------------
-% Documents paths
-%---------------------------------------------------------------------------
-\makeatletter
-\def\input@path{{content/}}
-%or: \def\input@path{{/path/to/folder/}{/path/to/other/folder/}}
-\makeatother
 %-----------------  Base packages     --------------------------------------
 % Include Packages
 \usepackage[french,ngerman,main=english]{babel}
@@ -42,7 +35,7 @@
 %-----------------  Bibliography---   --------------------------------------
 \usepackage[
     backend=biber,
-    style=alphabetic,
+    style=ieee,
     sorting=ynt
 ]{biblatex}
 \addbibresource{body_language.bib}
@@ -59,8 +52,7 @@
 \setkomafont{headsepline}{\color{BFH-DarkBlue}} % BFH-DarkBlue requires bfhcolors package
 \setkomafont{footsepline}{\color{BFH-DarkBlue}} %
 \chead*{Kommunikation 1 für die Informatik: Körpersprache}
-\ofoot*{\pagemark} % Use \pagemark to set pagenumbering
-
+\setlength\parindent{12pt}
 \LoadBFHModule{boxes}
 
 
@@ -82,9 +74,7 @@
 %------------ TABLEOFCONTENTS ---------------
     \tableofcontents
 
-
-    \section{Einleitung}\label{sec:vorwort}
-    Zwischen
+    \include{content/intro}
 
     \part{Thorie}
     \section{Das Modell vom Behagen und Unbehagen}\label{sec:das-modell-vom-behagen-und-unbehagen}
@@ -182,7 +172,7 @@
     \subsection{Wie andere nonvberbal kommunizieren}
 
     \subsubsection{10 Gebote zur Entschlüsselung nonverbaler Signale}
-    \textbf{1. Gebot: Du sollst ein aufmerksamer Beobachter deiner Umgebung sein.}
+    \hskip 12pt\relax\textbf{1. Gebot: Du sollst ein aufmerksamer Beobachter deiner Umgebung sein.}
     \par\textbf{2. Gebot: Du sollst kontextbezogen beobachten.}
     \par\textbf{3. Gebot: Du sollst lernen, universell gültige nonverbale Verhaltensweisen zu erkennen.}
     \par\textbf{4. Gebot: Du sollst lernen, idiosynkratische nonverbale Verhaltensweisen zu erkennen und zu deuten.}
@@ -211,6 +201,8 @@
     \begin{bfhNoteBox}
         A note box.
     \end{bfhNoteBox}
+
+    \printbibliography
 
 
 
